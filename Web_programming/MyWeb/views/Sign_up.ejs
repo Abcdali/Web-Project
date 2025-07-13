@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="Sign-up.CSS" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    *{
+  font-family: "Fjalla One", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Fjalla One", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+   background-attachment: fixed;
+  
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 20px;
+ justify-content: center;
+ 
+}
+.hero .container{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  max-width: -20%;
+  bottom: 10%;
+  left: 3vw;
+ 
+  
+  
+}
+.container p{
+  margin-top: -20px;
+  font-size: 20px;
+  outline-color: #000;
+  color: white;
+  animation-name: appear;
+ animation-duration: 4s;
+ position: relative;
+ animation-timing-function: ease-out;
+ animation-fill-mode: backwards;
+}
+.nav{
+margin-left: -50rem;
+}
+.nav li{
+  margin: 20px;
+  margin-top: -20px;
+}
+
+header {
+  background-color: #b6c2b6;
+  padding: 20px 40px;
+ opacity: 50px;
+border-bottom: 1px solid black;
+
+ position: sticky;
+ opacity: 99%;
+ 
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  float: left;
+  margin-top: -30px;
+  
+  
+ 
+}
+
+nav {
+  float: right;
+  margin-right: -90px;
+  margin-top: -10px;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.nav li a:hover {
+
+  color: orange;
+ 
+  border-bottom: 2px solid orange;
+  
+  
+}
+
+
+.nav-right{
+ margin-top: -38%;
+margin-left: -60px;
+display: flex;
+
+  
+}
+
+.search-shopping a{
+  
+  margin: 15px;
+ 
+}
+
+.sign-in{
+  margin-right: -10px;
+  margin-top: -10px;
+}
+.sign-in button{
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
+ 
+}
+.sign-in button:hover{
+  background-color: orange;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.search-shopping a:hover {
+
+  color: orange;
+
+  border-bottom: 2px solid orange;
+  
+  
+}
+
+   
+  
+  .container {
+    width: 100%;
+    height: 60%;
+   
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    height: 53rem;
+    background-color: #eee;
+    border-radius: 3rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner {
+    position: absolute;
+    top: 10%;
+    left: -3rem;
+    text-align: center;
+    color: #fff;
+    width: 30rem;
+    z-index: 100;
+   
+    padding-top: 60px;
+  }
+  
+  /* .container.change .banner {
+    left: 5rem;
+  } */
+  
+  .banner h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: -90px;
+    color: red;
+
+  }
+  
+  .banner p {
+    font-size: 1.4rem;
+margin-top: -20px;
+    
+  }
+  
+  .header {
+    width: 40%;
+    height: 100%;
+   background-image: url(/images/edit.png);
+ 
+   background-repeat: no-repeat;
+   background-position:center;
+background-attachment: scroll;
+  background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+
+  
+  
+  .signup-form {
+    width: 60rem;
+    height: 120%;
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rem 0;
+    transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    
+  }
+
+  
+   /* .container.change .signup-form {
+    left: 40rem;
+  }  */
+  
+  .signup-form h1 {
+    font-size: 3rem;
+    color: red;
+    margin-top: -30px;
+    margin-left: -28rem;
+ 
+   
+  }
+  .social-media {
+    display: flex;
+   margin: 20px;
+  }
+  
+  .social-media i {
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid #777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: #555;
+    margin-left: -11rem;
+  }
+  
+  .signup-form p {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 2rem;
+    margin: 1px;
+    margin-left: -25rem;
+  
+    
+  }
+  
+  .input-group {
+    position: relative;
+    margin-left: -15rem;
+    width: 50%;
+  }
+  
+  .input-group input {
+    
+    height: 50%; 
+    
+    padding: 1rem 10rem 1rem 3rem;
+    background-color: #ddd;
+    border: none;
+    margin: 5px;
+    border-radius: 40px;
+    font-size: 15px;
+    left: 16px;
+   
+  } 
+ 
+  
+  .input-group i {
+    position: relative;
+    top: 43%;
+    left: 25px;
+    /* transform: translateY(-50%); */
+    font-size: 17px; 
+    color: #555;
+    margin-left: 13rem;
+    left: -15rem;
+  }
+  .button{
+    font-size: 2rem;
+    color: black;
+    padding: 20px;
+  }
+  .signup-form .sign {
+    width: 10%;
+    border: 3px solid black;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: hsl(0, 6%, 7%);
+   text-align: center;
+   justify-content: center;
+    margin-top: -70px;
+    cursor: pointer;
+    padding: 10px;
+   
+    margin: 5px;
+    margin-left: -25rem;
+  }
+  .signup-form .sign:hover{
+    background-color: greenyellow;
+    transform: scale(1.2);
+
+  }
+  #message, #message1, #phone {
+    margin-top: -15px;
+    padding: 10px;
+    
+    color: red;
+}
+ 
+    
+  </style>
+  <body>
+    <header >
+       
+           
+      <div class="container">
+     
+          <a href="#" class="logo"><img src="/images/food-removebg-preview.png" alt="" width="50px"></a>
+          
+          <nav >
+              <ul class="nav">
+                  <li><a    href="#">Home</a></li>
+                  <li><a    href="#">Menu</a></li>
+                  <li><a    href="#">Mobile-App</a></li>
+                  <li><a    href="#">About</a></li>
+                  
+                  
+              </ul>
+              <div class="nav-right" >
+                <div class="search-shopping" >
+                  <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <a href=" "><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </div>
+               
+                      <a  href="Sign_in" class="sign-in" id="sign" target="_blank" ><button>Sign In</button></a>
+                 </div>
+              </nav>
+        
+              </div>
+  </header>
+    
+
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="banner">
+          <h1>Quick Service Restaurant</h1>
+          <p>WE GIVE YOUR THE BETTER SERVICE</p>
+        </div>
+        <div class="header">
+          
+        </div>
+        <form action="/Sign_up"  onsubmit="return" id="signupForm"   method="post"  class="signup-form" target="_blank">
+          <h1>Create Account</h1>
+          <div class="social-media">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <p>or use your email for registration</p>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            
+            <input type="text" placeholder="Name" id="Name" name="name"  required >
+            
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-circle-user"></i>
+            <input type="text" placeholder="Username" id="username" name="username"  required>
+           
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" id="Email" name="email" required>
+          
+          </div>
+          <div class="input-group">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" placeholder="XXXX-XXXXXX-X" id="tel" name="tel" required >
+          
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+           
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Confirm Password" id="confirmPassword" name="cpassword" required >
+           
+          </div>
+          <p id="message"><%= message %></p>
+            <button class="sign" target="_blank"><b>SIGN UP</b></button></form>
+            
+            
+        
+      </div>
+    </div>
+   
+   
+  </body>
+  
+</html>

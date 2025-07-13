@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishEat</title>
+    <link rel="stylesheet" href="Home2.CSS">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<style>
+    @keyframes appear {
+   
+   0% {
+        opacity: 0;
+        bottom: -200px;
+   }
+  
+   100% {
+       opacity: 1;
+       bottom:0;
+   }
+}
+@keyframes pulse {
+  
+   0% {
+       transform: scale(1);
+   }
+  
+   50% {
+       transform: scale(1.2);
+   }
+  
+   100% {
+       transform: scale(1);
+   }
+}
+@keyframes slideIn {
+   from {
+       right: -310px;
+   }
+   to {
+       right: 0;
+   }
+}
+
+@keyframes slideOut {
+   from {
+       right: 0;
+   }
+   to {
+       right: -310px;
+   }
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+
+body {
+   font-family: "Fjalla One", sans-serif;
+   font-style: normal;
+   margin: 0;
+   padding: 0;
+    background-attachment: fixed;
+    
+}
+
+.container {
+   max-width: 1000px;
+   margin: 0px auto;
+   padding: 20px;
+  justify-content: center;
+}
+
+.hero .container{
+   /* position: absolute; */
+   
+   /* display: flex; */
+   
+   align-items: start;
+   gap: 1rem;
+   max-width: -20%;
+   bottom: 10%;
+   left: 3vw;
+  
+   
+   
+}
+.container p{
+   margin-top: -20px;
+   font-size: 20px;
+   outline-color: #000;
+   color: rgb(221, 17, 17);
+   animation-name: appear;
+  animation-duration: 4s;
+  position: relative;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.nav{
+   margin-left: -50rem;
+   
+ }
+ .nav li{
+     margin: 20px;
+     margin-top: -20px;
+ }
+ 
+ header {
+     background-color: #b6c2b6;
+     padding: 10px 0;
+    /* position: relative; */
+    opacity: 50px;
+    
+ }
+  
+ 
+ .logo {
+     font-size: 20px;
+     font-weight: bold;
+     color: #000;
+     float: left;
+     margin-top: -30px;
+     
+    
+ }
+  nav {
+   float: right;
+   margin-right: -90px;
+   margin-top: -10px;
+   
+}
+
+nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+nav li {
+   display: inline-block;
+   margin-left: 20px;
+}
+
+
+nav a {
+   text-decoration: none;
+   color: #000;
+}
+.nav li a:hover {
+   border-bottom: 2px solid orange; 
+   color: orange;
+   
+}
+
+.nav-right{
+   margin-top: -37%;
+  margin-left: -20%;
+  display: flex;
+  z-index: 20;
+
+    
+}
+
+.search-shopping i {
+    
+    margin: 12px;
+    
+   
+}
+.search-shopping h4{
+   font-size: 20px;
+   margin-left: 75px;
+  background-color: rgb(238, 255, 0);
+  position: absolute;
+  margin-top: -28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+h4{
+   align-items: center;
+   justify-content: center;
+  
+}
+
+.search-shopping i:hover {
+  
+   color: orange;
+   border-bottom: 2px solid orange;
+   
+}
+
+.Confirm-close {
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   align-items: center; 
+   gap: 10px; 
+   font-weight: bold;
+   font-size: 20px;
+  
+   
+ }
+ .close{
+   margin-right: -10rem;
+   margin-bottom: -54px;
+   border: none;
+   font-weight: bold;
+   font-size: 20px;
+   background-color: red;
+   cursor: pointer;
+ }
+ .close:hover{
+   background-color: red;
+ }
+   .cart-button:hover{
+   background-color: orange;
+ }
+   .cart-button {
+  
+   border: 2px solid black;
+   font-weight: bold;
+   font-size: 20px;
+   background-color: orange;
+   width: 150px;
+   border: none;
+   padding: 10px;
+   margin-left: -10rem;
+   
+ }
+.delivery-payment{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+  
+
+}
+.Delivery{
+   margin-top: 12rem;
+}
+#payment{
+   color: orange;
+   font-weight: bold;
+}
+h3{
+   margin-top: -2.4rem;
+   margin-left: 7rem;
+   color: orange;
+}
+.payment{
+   margin-left: 160px;
+   margin-top: -4.5rem;
+}
+
+.cart-total{
+   margin-left: 100px;
+   font-size: 20px;
+}
+#cart-total{
+   color: orange;
+}
+
+body {
+   box-sizing: border-box;
+}  
+
+.cart-menu {
+   position:fixed;
+   display: none;
+   top: 0;
+   right: -10px;
+   width: 300px;
+   height: 100%;
+   background: white;
+   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+   padding: 20px;
+   overflow-y: auto;
+   z-index: 2;
+}
+
+.cart-menu h2{
+   color: #e8bc0e;
+   font-size: 30px;
+   align-items: center;
+   justify-content: center;
+  margin-left: 120px;
+
+}
+.cart-menu.active {
+   right: 0;
+}
+
+#cart-items li {
+   list-style-type: none;
+   margin: 5px 0;
+   padding: 5px 0;
+}
+
+
+/* @media (max-width: 768px) {            
+   .cart-menu {
+       width: 100%;
+       right: -100%;
+   }
+
+   .cart-menu.active {
+       right: 0;
+   }
+}
+
+@media (max-width: 480px) {
+   .cart-button {
+       width: 100%;
+       left: 0;
+       right: 0;
+       text-align: center;
+       border-radius: 0;
+   }
+} */
+
+
+.main {
+   padding-bottom: 100px;
+}
+
+.hero {
+   
+  background-image: url(/images/restaurent.jpg);
+  width: auto;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+
+ background-position-x: center;
+   padding-top: 100px;
+   padding-bottom: 40px;
+   text-align: left;
+margin: 10px auto;
+border-radius: 50px;
+margin-left: 30px;
+margin-right: 30px;
+margin-top: 20px;
+
+   
+   
+
+   
+
+}
+.hero button{
+   background-color: orange;
+   color: #000;
+   border-radius: 150px;
+   margin-left: 7rem;
+   width: 8rem;
+   font-size: 1rem;
+   height: 3rem;
+   cursor: pointer;
+   margin-top: -10rem;
+   margin-left: 86px;
+   animation: pulse 2s infinite;
+
+}
+
+.nav i{
+  color: orange;
+}
+.hero h1 {
+   font-size: 56px;
+  margin-top: -20px;
+  color: rgb(15, 15, 15);
+  animation-name: appear;
+  animation-duration: 2s;
+  position: relative;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  
+}
+.hero span{
+   color: orange;
+   animation: fadeIn 3s;
+}
+#menu{
+   margin-left: 1.5rem;
+}
+#menu li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+.circular--landscape {
+   display: flex;
+   position: relative;
+   width: 100px;
+   height: 100px;
+ overflow: hidden;
+   border-radius: 200%;
+   text-align: center;
+   margin: 20px;
+   transition: box-shadow 0.2s ease-in-out;
+  
+   
+ }
+
+ .circular--landscape img {
+   width:100%;
+   height: 100%;
+   text-align: center;
+   justify-content: center;
+   transition: transform 0.2s ease-in-out;
+   
+   
+   
+ }
+ #menu li:hover {
+   transform: scale(1.1);
+}
+ .circular--landscape:hover {
+   box-shadow: 0 0 30px rgb(255, 223, 41);
+   border-radius: 2px solid orange;
+  
+}
+.circular--landscape img:hover {
+   transform: scale(1.1);
+   
+  
+}
+
+#menu h3{
+   margin-left: 40px;
+   padding: 2px;
+   margin-top: -10px;
+}
+#menu hr{
+   width: 1100px;
+   height: 2px;
+   margin-left: 2rem;
+}
+ .explore-menu  {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 1rem;
+   max-width: -20%;
+   bottom: 10%;
+   left: 3vw;
+ }
+ .explore-menu b {
+   margin-left: 30px;
+   font-size: 36px;
+ }
+ .explore-menu p {
+   margin-left: 30px;
+   font-size: 16px;
+   margin-top: -10px;
+ }
+ .background{
+   background-color: whitesmoke;
+   width: 10    0%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-position: absolute;
+   background-size: cover;
+   opacity: 100%;
+   
+ }
+ .product-price{
+   margin-left: 20px;
+   margin: 20px;
+}
+.product-price h1{
+   padding: 5px;
+   font-size: 25px;
+   color: orange;
+   margin-bottom: -10px;
+  
+}
+ #pizza{
+   margin-left: 2rem;
+ }
+ #pizza li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#pizza .food{
+ margin: 15px;
+
+}
+.food{
+   box-shadow: 0px 0px 10px #00000015;
+   border-radius: 50px;
+   padding: 5px;
+   display: inline-block;
+   
+
+}
+
+.food:hover{
+   
+   transform: scale(1.05);
+   
+}
+
+.food img{
+   border-radius: 50px;
+   margin: 1px;
+   padding: 1px;
+   margin-left: -5px;
+   margin-top: -6px;
+   margin-right: -9px;
+   position: relative;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+   
+}
+.food .cart-img{
+margin-right: -100px;
+position: relative;
+
+}
+.Add-to-card {
+   position: relative;
+   top: -3.0rem;
+  font-weight: bold;
+   margin-left: 6.3rem;
+   
+}
+ button{
+    padding: 10px;
+   width: 50%; 
+   height: 60%
+   
+
+}
+ button:hover{
+    cursor: pointer;
+    background-color: #e8bc0e;
+}
+
+
+#pizza h3{
+   margin-left: 10px;
+  padding: 5px;
+   margin-top: -2px;
+   font-size: 17px;
+}
+ .rating-star img {
+  
+   justify-content: space-between;
+   margin-top: -46px;
+   margin-right: 10px;  
+  float: right;
+  
+
+}
+#pizza p{
+  margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+}
+#burger{
+   margin-left: 2rem;
+ }
+
+#burger .food{
+   margin: 13px;
+ }
+#burger li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#burger h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+   
+}
+#burger p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+}
+
+#sandwich{
+   margin-left: 1rem;
+ }
+ .quantity{
+   margin-left: 10rem;
+   position: relative;
+ }
+ .quantity input{
+   width: 40px;
+   margin-bottom: -20px;
+   margin: 10px;
+   
+ }
+#sandwich .food{
+   margin: 15px;
+ }
+#sandwich li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#sandwich h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#sandwich p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+}
+#chicken{
+   margin-left: 1rem;
+ }
+#chicken .food{
+   margin: 14px;
+ }
+#chicken li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#chicken h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#chicken p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+}
+
+#pasta{
+   margin-left: 1rem;
+ }
+#pasta .food{
+   margin: 16px;
+}
+#pasta li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#pasta h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#pasta p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+}
+
+#Cake{
+   margin-left: 2rem;
+ }
+#Cake .food{
+   margin: 18px;
+ }
+#Cake li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#Cake h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#Cake p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+}
+
+#Deserts{
+   margin-left: 2rem;
+ }
+#Deserts .food{
+   margin: 9px;
+   margin-left: 15px;
+ }
+#Deserts li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#Deserts h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#Deserts p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+}
+
+#Rolls{
+   margin-left: 2rem;
+ }
+#Rolls .food{
+   margin: 12px;
+   margin-left: 15px;
+ }
+#Rolls li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+}
+#Rolls h3{
+   margin-left: 10px;
+   padding: 5px;
+   margin-top: -2px;
+   font-size: 15px;
+   
+}
+#Rolls p{
+   margin-left: 10px;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: -10px;
+  float: left;
+ 
+} 
+.Appdownload{
+   margin: auto auto;
+   margin-top: 100px;
+   font-size: max(2rem,20px);
+   text-align: center;
+   font-weight: 500;
+}
+.Appimage{
+   display: flex;
+   justify-content: center;
+   gap: max(2vw,10px);
+   margin-top: 40px;
+
+
+}
+.Appimage img{
+   width: max(30vw,120px);
+   max-width: 180px;
+   transition: 0.5s;
+   cursor: pointer;
+}
+.Appimage img:hover{
+   transform: scale(1.05);
+}
+.footer{
+   color: orange;
+   background-color: #323232;
+   display: flex;
+  margin-top: 50px;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   padding: 20px 8vw;
+   padding-top: -50px;
+   opacity: 60%;
+   
+  
+}
+
+.footer-class{
+   width: 100%;
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   gap: 80px;
+
+
+}
+.social-media {
+   display: flex;
+  /* margin: 60px; */
+  margin-top: -30px;
+ margin-left: -20px;
+ }
+.social-media i{
+   
+   width: 3rem;
+   height: 3rem;
+   border: 0.1rem solid orange;
+   border-radius: 40%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 1rem;
+   font-size: 2rem;
+   cursor: pointer;
+   
+   
+}
+.social-media i:hover{
+   transform: scale(1.1);
+}
+.footer-left, .footer-center, .footer-right{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 20px;
+}
+.footer-left li, .footer-center li, .footer-right li{
+   list-style: none;
+   margin-bottom: 10px;
+   margin-left: -40px;
+   padding: 5px;
+}
+.footer-left ul, .footer-center ul, .footer-right ul{
+   
+ 
+   margin-top: -20px;
+   cursor: pointer;
+}
+.footer hr{
+   height: 2px;
+   width: 100%;
+   background-color: orange;
+}
+.add-minus{
+   margin-left: 9rem;
+   
+   position: relative;
+}
+.counter {
+  
+   position: absolute;
+   top: -50px;
+   left: 36px;
+   margin: 2px;
+   font-size: 20px;
+   color: white;
+ }
+.plus-icon{
+   align-items: center;
+   justify-content: center;
+  
+  position: relative;
+   top: -49px;
+   left: 6px;
+   margin: 2px;
+    
+ 
+}
+.minus-icon{
+   
+   
+   position: absolute;
+   margin: 2px;
+   top: -49px;
+   left: 3.6rem;
+}
+
+.plus-icon:hover{
+   cursor: pointer;
+   background-color: orange;
+}
+.minus-icon:hover{
+   cursor: pointer;
+   background-color: orange;
+
+}
+
+#Pizza ul:hover{
+   border: 4px solid orange;
+}
+
+</style>
+<body>
+   
+    <header >
+      <div class="container">
+       
+         <a href="#" class="logo"><img src="/images/food-removebg-preview.png" alt="" width="50px"></a>
+         
+         <nav >
+             <ul class="nav">
+                 <li><a    href="Home2">Home</a></li>
+                 <li><a    href="#menu">Menu</a></li>
+                 <li><a    href="#Appdownload">Mobile-App</a></li>
+                 <li><a    href="#footer">About</a></li>
+                 
+             </ul>
+             <div class="nav-right">
+               <div class="search-shopping">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                 <i  id="Shop" class="fa fa-shopping-cart" aria-hidden="true"  onclick="toggleCartMenu()"></i>
+                <i class="fas fa-user"></i>
+                 
+               </div>
+                </div>
+
+             </nav>
+       
+             </div>
+      </header>
+
+          
+              
+   <div id="cart-menu" class="cart-menu">
+       <h2>Cart</h2>
+       <ul id="cart-items"></ul>
+       <div class="delivery-payment">
+         <p id="Delivery">Delivery Charges:<h3>2$</h3></p>
+         <p class="payment">Payment: $<span id="payment">0.00</span></p>
+       </div>
+  <hr>
+       <p class="cart-total">Discount_price: $<span id="cart-total">0.00</span></p>
+   
+       <div class="Confirm-close">
+         <button class="close" id="close" >Close</button>
+       <a href="Payment" target="_blank"><button class="cart-button" id="Checkout" >Checkout</button></a>
+       
+       </div>
+       
+
+   </div>
+     <section class="hero">
+               <div class="container">
+                 <h1>Order your favourite <br>
+                  <span>food here</span></h1>
+                  <p>Choose from a diverse menu featuring a delectable array of dishes <br> 
+                      crafted with the finest ingredients and culinary expertise, <br>
+                     One delicious meal at a time. </p>
+                 </div>
+         
+            
+                <button ><b>Get Started</b> </button>
+            
+     </section>
+    
+ </main>
+ <div class="explore-menu">
+     <b>Explore our menu</b>
+     <p>Choose from a diverse menu featuring a delectable array of dishes 
+      crafted with the finest ingredients and culinary expertise, 
+     One delicious meal at a time. </p>
+  </div>
+    <!-- menu  -->
+     
+    <section id="menu">
+      <ul >
+          <li>
+             <div class="circular--landscape" id="Pizza">
+                 <a href="#pizza"><img src="/images/image.JPG" alt="" width="40px"></a>
+             </div>
+            
+              <h3>Pizza</h3>
+             </li>
+          <li>
+             <div class="circular--landscape">
+                <a href="#burger"> <img src="/images/burger1.JPG" alt="" width="40px"></a>
+             </div>
+              <h3>burger</h3>
+          </li>
+          <li>
+             <div class="circular--landscape">
+                <a href="#sandwich"> <img src="/images/saaan.JPG" alt="" width="40px"></a>
+             </div>
+              <h3>sandwich</h3>
+          </li>
+          <li>
+             <div class="circular--landscape">
+               <a href="#chicken">  <img src="/images/chi.JPG" alt="" width="40px"></a>
+             </div>
+              <h3>chicken</h3>
+             </li>
+             <li>
+                 <div class="circular--landscape">
+                    <a href="#pasta"> <img src="/images/pasta.JPG" alt="" width="40px"></a>
+                 </div>
+                  <h3>Pasta</h3>
+                 </li>
+                 <li>
+                     <div class="circular--landscape">
+                        <a href="#Cake"> <img src="/images/cake.JPG" alt="" width="40px"></a>
+                     </div>
+                      <h3>Cake</h3>
+                     </li>
+                     <li>
+                         <div class="circular--landscape">
+                             <a href="#Deserts"><img src="/images/deserts.JPG" alt="" width="40px"></a>
+                         </div>
+                          <h3>Deserts</h3>
+                         </li>
+                         <li>
+                             <div class="circular--landscape">
+                                <a href="#Rolls"> <img src="/images/rolls.JPG" alt="" width="40px"></a>
+                             </div>
+                              <h3>Rolls</h3>
+                             </li>
+                             <hr>
+                             
+      </ul>
+  </section>
+ <div class="background">
+  
+<!-- pizza menu  -->
+<section id="pizza">
+   <ul id="dishes-container">
+          <li>
+          <div class="food" >
+              <img class="cart-img" src="/images/pizza1.JPG" alt="" width="255px" height="175px">  
+            
+           <h3 class="product-name">Margherita Pizza</h3>
+           <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+           </div>   
+           <p>This is a classic Neapolitan pizza topped   <br> with tomato sauce,mozzarella cheese,  <br>   and fresh basil leaves.</p>
+           <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$15</h1>
+           </div>
+           <button class="Add-to-card"> Add to Card</button>
+          </div>
+          </li>
+          <li>
+              <div class="food" >
+                  <img  class="cart-img" src="/images/pizza2.JPG" alt="" width="255px" height="175px" >
+               <h3 class="product-name">Meat Lovers Pizza</h3>
+               <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>   
+               <p>This pizza is loaded with meats, such as  <br> pepperoni, sausage, ham, bacon, <br> and Italian sausage.</p>
+               <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$20</h1>
+                 </div>
+               <button class="Add-to-card"> Add to Card</button>
+              </div>
+              </li>
+              <li>
+                  <div class="food" >
+                      <img class="cart-img" src="/images/pizza3.JPG" alt="" width="245px"  height="175px">
+                     
+                   <h3 class="product-name">White Pizza</h3> 
+                   <div class="rating-star">
+                     <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>               
+                   <p>This pizza is made with a white sauce  <br>  base such as béchamel sauce, instead <br>  of tomato sauce.</p>
+                   <div class="quantity">
+                     <input type="number" class="quantity-input"  value="1" min="1">
+                    </div>
+                    <div class="product-price">
+                     <h1>$25</h1>
+                    </div>
+                   <button class="Add-to-card"> Add to Card</button>
+                  </div>
+                  </li>
+                  <li>
+                      <div class="food" >
+                          <img class="cart-img" src="/images/image.JPG" alt="" width="238px"  height="175px" >
+                       <h3 class="product-name">Vegetariana Pizza</h3>
+                       <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                       </div>   
+                       <p>This pizza is loaded with vegetables, <br> such as mushrooms,  green peppers,  <br>onions, olives, and spinach.</p>
+                       <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$30</h1>
+                       </div>
+                       <button class="Add-to-card"> Add to Card</button>
+                      </div>
+                      </li>
+
+                 
+                 
+    </ul>
+</section>
+<!-- burger menu  -->
+<section id="burger">
+  <ul>
+        <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/burger1.JPG" alt="" width="263px"  height="185px"   >    
+         <h3 class="product-name">Shammi Burger</h3>
+         <div class="rating-star">
+            <img  src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p>A patty made with minced beef seasoned <br> like a shami kebab,a flavorful Pakistani <br>   dish.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$10</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img class="cart-img" src="/images/burger2.JPG" alt="" width="250px"  height="185px" >
+                <h3 class="product-name"> Karachi Burger</h3>
+                 <div class="rating-star">
+                 <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                   <p>This uses a pun on Karachi, a Pakistani <br>    city, and implies a spicy <br> kick.</p>
+                   <div class="quantity">
+                     <input type="number" class="quantity-input"  value="1" min="1">
+                    </div>
+                    <div class="product-price">
+                     <h1>$12</h1>
+                    </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                  </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img class="cart-img" src="/images/burger3.JPG" alt="" width="260px"  height="175px">
+                 <h3 class="product-name">Tandoori Burger</h3>
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>                
+                 <p>This name highlights the use of tandoori  <br>spices for a smoky and flavorful  <br> experience.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img class="cart-img"  src="/images/burger4.JPG" alt="" width="250px"  height="185px" >
+                     <h3 class="product-name">Karahi Burger</h3>
+                     <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p>This name references a spicy Pakistani  <br>  stew (karahi) and uses alliteration for <br> memorability.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$15</h1>
+                       </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    
+                    </li>
+
+               
+               
+  </ul>
+</section>
+<!-- sandwich menu  -->
+<section id="sandwich">
+  <ul>
+        <li>
+        <div class="food" >
+      <img class="cart-img" src="/images/sandwich1.JPG" alt="" width="238px"  height="185px"   >    
+         <h3 class="product-name">Pig's Picnic</h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p>sandwich combines pulled pork with  <br>   crispy bacon, tangy coleslaw, and a  <br> sweet and smoky barbecue sauce.</p>
+        <div class="quantity">
+         <input type="number" class="quantity-input"   value="1" min="1">
+        </div>
+        <div class="product-price">
+         <h1>$10</h1>
+        </div>
+         <button class="Add-to-card"> Add to Card</button>
+         <ul id="cart-items"></ul>
+         <div id="cart-menu" class="cart-menu"></div>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img class="cart-img" src="/images/sandwich5.JPG" alt="" width="258px"  height="185px" >  
+             <h3 class="product-name">  Italy - Panini</h3>
+             <div class="rating-star">
+              <img src="/images/rating-star.JPG" alt="" width="80px">
+           </div>   
+             <p> A classic Italian pressed sandwich made <br>  with crusty bread, fillings like cheese,  <br> cured meats,and vegetables,and grilled.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+             <div class="product-price">
+               <h1>$12</h1>
+             </div>
+             <button class="Add-to-card"> Add to Card</button>
+          </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img  class="cart-img" src="/images/sandwich3.JPG" alt="" width="254px"  height="185px">
+                 <h3 class="product-name">Cuban Crunch</h3> 
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>               
+                 <p>sandwich features slow-roasted pulled <br>  pork, smoky ham, tangy pickles, melty  <br>  Swiss   cheese, and a smear of mustard.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img class="cart-img" src="/images/sandwich4.JPG" alt="" width="258px"  height="185px" >
+                     <h3 class="product-name">Bread sandwich</h3>
+                     <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p>A simple sandwich made with two slices  <br>of bread, with one slice of toasted <br> bread in the middle.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                     <div class="product-price">
+                        <h1>$15</h1>
+                     </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    </li>
+
+               
+               
+  </ul>
+</section>
+
+<!-- Chicken menu  -->
+<section id="chicken">
+<ul>
+    <li>
+    <div class="food" >
+        <img  class="cart-img" src="/images/chicken1.JPG" alt="" width="265px"  height="185px"   >
+     <h3 class="product-name">Herbaceous Hen</h3>
+     <div class="rating-star">
+      <img src="/images/rating-star.png" alt="" width="80px">
+   </div>   
+     <p>Infused with a medley of fresh herbs,this <br>  roast chicken offers a garden-fresh  <br>  flavor that is aromatic and deliciously.</p>
+     <div class="quantity">
+      <input type="number" class="quantity-input"  value="1" min="1">
+     </div>
+     <div class="product-price">
+      <h1>$10</h1>
+     </div>
+     <button class="Add-to-card"> Add to Card</button>
+  </div>
+    </li>
+    <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/chicken2.JPG" alt="" width="255px"  height="185px" >
+         <h3  class="product-name">  Golden Glory</h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p> This roast chicken shines with a  golden<br>  hue, delivering a rich and savory <br>  flavor that is truly glorious.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$12</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img  class="cart-img" src="/images/chicken3.JPG" alt="" width="254px"  height="185px">
+             <h3 class="product-name">Cuban Crunch</h3>   
+             <div class="rating-star">
+               <img src="/images/rating-star.png" alt="" width="80px">
+           </div>             
+             <p>sandwich features slow-roasted pulled <br>  pork, smoky ham, tangy pickles, melty  <br>  Swiss   cheese, and a smear of mustard.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+              <div class="product-price">
+               <h1>$14</h1>
+              </div>
+             <button class="Add-to-card"> Add to Card</button>
+             </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img  class="cart-img" src="/images/chicken4.JPG" alt="" width="251px"  height="185px" >
+                 <h3 class="product-name">Fried Chicken</h3>
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>   
+                 <p>American Fried Chicken deserves  <br> Chicken pieces are battered,and deep- <br> fried  until golden brown and crispy.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$15</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+
+           
+           
+</ul>
+</section>
+
+<!-- pasta menu  -->
+<section id="pasta">
+  <ul>
+        <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/pasta1.JPG" alt="" width="250px"  height="185px" >
+         <h3 class="product-name">Peanut Noodles</h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p>Rice noodles coated in a rich and spicy <br> peanut sauce, mixed with shredded <br>  chicken, bell peppers, carrots.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$10</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img class="cart-img" src="/images/pasta2.JPG" alt="" width="260px"  height="185px" >
+             <h3 class="product-name">Vietnamese Noodles</h3>
+             <div class="rating-star">
+               <img src="/images/rating-star.png" alt="" width="80px">
+           </div>   
+             <p> Noodles served in a fragrant beef broth <br> with thinly sliced beef, fresh herbs,bean <br>  sprouts, lime.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+              <div class="product-price">
+               <h1>$12</h1>
+              </div>
+             <button class="Add-to-card"> Add to Card</button>
+          </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img class="cart-img" src="/images/pasta3.JPG" alt="" width="260px"  height="185px">
+                 <h3 class="product-name">Mexican Pasta</h3> 
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>               
+                 <p>Penne pasta tossed with a zesty blend of  <br>  salsa, black beans, corn, jalapeños, and  <br>melted cheddar cheese.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img class="cart-img" src="/images/pasta4.JPG" alt="" width="241px" height="185px">
+                     <h3 class="product-name"> Spiced Curry Pasta</h3>
+                     <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p> Fusilli pasta combined with a creamy <br> coconut curry sauce, featuring <br> a mix of vegetables and chicken.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$15</h1>
+                       </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    </li>
+
+               
+               
+  </ul>
+</section>
+<!-- Cake menu  -->
+<section id="Cake">
+  <ul>
+        <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/cake1.JPG" alt="" width="248px"  height="185px">
+         <h3 class="product-name">Chocolate Truffle </h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p>An indulgent chocolate cake with  <br>  layers of rich chocolate ganache and a  <br>creamy truffle  with dark chocolate.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$10</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img class="cart-img"src="/images/cake2.JPG" alt="" width="240px"  height="185px" >
+             <h3 class="product-name">Vanilla Bliss</h3>
+             <div class="rating-star">
+               <img src="/images/rating-star.png" alt="" width="80px">
+           </div>   
+             <p> A classic vanilla cake made with <br> real vanilla beans, layered with <br> vanilla beanand vanilla buttercream.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+              <div class="product-price">
+               <h1>$12</h1>
+              </div>
+             <button class="Add-to-card"> Add to Card</button>
+          </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img class="cart-img" src="/images/cake3.JPG" alt="" width="251px"  height="185px">
+                 <h3 class="product-name">Strawberry Forever</h3>  
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>              
+                 <p> A delightful strawberry cake with <br> layers of fresh strawberry compote <br> and  cream,of strawberry buttercream.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img class="cart-img" src="/images/cake4.JPG" alt="" width="239px"  height="185px" >
+                     <h3 class="product-name">Black Beauty</h3>
+                     <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p> A rich chocolate cake layered with <br>cherry compote and whipped cream,<br> finished with dark chocolate.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$15</h1>
+                       </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    </li>
+
+               
+               
+  </ul>
+</section>
+
+<!-- Deserts menu  -->
+<section id="Deserts">
+  <ul>
+        <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/deserts1.JPG" alt="" width="252px"  height="185px"   >
+         <h3 class="product-name">Champagne Raspberry</h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p> A light and airy mousse made with <br> fresh raspberries and a splash of <br> champagne, served in an elegant flute.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$10</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img class="cart-img" src="/images/deserts2.JPG" alt="" width="258px"  height="185px" >
+             <h3 class="product-name">Cherry Almond</h3>
+             <div class="rating-star">
+               <img src="/images/rating-star.png" alt="" width="80px">
+           </div>   
+             <p> A traditional French dessert featuring <br> a custard-like batter baked with <br> juicy cherries and topped with  almonds.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+              <div class="product-price">
+               <h1>$12</h1>
+              </div>
+             <button class="Add-to-card"> Add to Card</button>
+          </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img class="cart-img" src="/images/deserts3.JPG" alt="" width="259px"  height="185px">
+                 <h3 class="product-name">Chocolate Raspberry</h3>  
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>              
+                 <p> A molten chocolate cake with <br>  a gooey raspberry center, served  <br>warm ,  ice cream and fresh raspberries.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img  class="cart-img" src="/images/deserts4.JPG" alt="" width="257px"  height="185px" >
+                     <h3 class="product-name"> Velvet Cheesecake</h3>
+                     <div class="rating-star">
+                        <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p>A velvety  velvet cheesecake with  <br>a luscious cream cheese filling, topped <br> with a layer of silky red velvet ganache.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$15</h1>
+                       </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    </li>
+
+               
+               
+  </ul>
+</section>
+
+<!-- Rolls menu  -->
+<section id="Rolls">
+  <ul>
+        <li>
+        <div class="food" >
+            <img class="cart-img" src="/images/rolls1.JPG" alt="" width="250px"  height="185px"   >
+         <h3 class="product-name">Korean Beef  Roll</h3>
+         <div class="rating-star">
+            <img src="/images/rating-star.png" alt="" width="80px">
+       </div>   
+         <p> A savory roll filled with marinated and <br>  grilled beef bulgogi, shredded carrots,<br>   cucumber, and lettuce.</p>
+         <div class="quantity">
+            <input type="number" class="quantity-input"  value="1" min="1">
+           </div>
+           <div class="product-price">
+            <h1>$10</h1>
+           </div>
+         <button class="Add-to-card"> Add to Card</button>
+      </div>
+        </li>
+        <li>
+            <div class="food" >
+                <img  class="cart-img" src="/images/rolls2.JPG" alt="" width="255px"  height="185px" >
+             <h3 class="product-name">Veggie tomato Roll</h3>
+             <div class="rating-star">
+               <img src="/images/rating-star.png" alt="" width="80px">
+           </div>   
+             <p>A crunchy roll filled with tempura-fried <br> vegetables like sweet tomato, bell <br> pepper, and asparagus,.</p>
+             <div class="quantity">
+               <input type="number" class="quantity-input"  value="1" min="1">
+              </div>
+              <div class="product-price">
+               <h1>$12</h1>
+              </div>
+             <button class="Add-to-card"> Add to Card</button>
+          </div>
+            </li>
+            <li>
+                <div class="food" >
+                    <img class="cart-img" src="/images/rolls3.JPG" alt="" width="245px"  height="185px">
+                 <h3 class="product-name">Spicy Veggie Roll</h3>
+                 <div class="rating-star">
+                  <img src="/images/rating-star.png" alt="" width="80px">
+               </div>                
+                 <p class="description"> A flavorful roll packed with a mix <br> of spicy  roasted vegetables, including <br> bell peppers, zucchini, and carrots.</p>
+                 <div class="quantity">
+                  <input type="number" class="quantity-input"  value="1" min="1">
+                 </div>
+                 <div class="product-price">
+                  <h1>$14</h1>
+                 </div>
+                 <button class="Add-to-card"> Add to Card</button>
+                 </div>
+                </li>
+                <li>
+                    <div class="food" >
+                        <img class="cart-img" src="/images/rolls4.JPG" alt="" width="257px"  height="185px" >
+                     <h3 class="product-name" id="product-name"> BBQ Pork Roll</h3>
+                     <div class="rating-star">
+                      <img src="/images/rating-star.png" alt="" width="80px">
+                   </div>   
+                     <p> A smoky, tender roll stuffed with <br> slow-cooked pulled pork, tangy BBQ  <br>sauce, and coleslaw, encased in a fluffy.</p>
+                     <div class="quantity">
+                        <input type="number" class="quantity-input"  value="1" min="1">
+                       </div>
+                       <div class="product-price">
+                        <h1>$15</h1>
+                       </div>
+                     <button class="Add-to-card"> Add to Card</button>
+                     </div>
+                    </li>
+
+               
+               
+  </ul>
+</section>   
+<div class="Appdownload" id="Appdownload">
+<p>
+   For Better Experience Download <br> WishEat App
+</p>
+ <div class="Appimage">
+   <img src="/images/Play store.JPG" alt=""><img src="/images/Appstore.JPG" alt="">
+ </div>
+</div>
+   <footer>
+   <div class="footer" id="footer">
+      <div class="footer-class" >
+         <div class="footer-left">
+            <a href="Home2"><img src="/images/food-removebg-preview.png" alt="" width="250px"></a>
+                
+         </div>
+            <div class="footer-center">
+               <h2>COMPANY</h2>
+               <ul>
+                  <li>Home</li>
+                  <li>About us</li>
+                  <li>Delivery</li>
+                  <li>Privacy policy</li>
+               </ul>
+            </div>
+               <div class="footer-right">
+                  <h2>GET IN TOUCH</h2>
+                  <ul>
+                     <li>+1-212-456-7890</li>
+                     <li>contact@wish.com</li>
+                  </ul>
+                  <div class="social-media">
+                     <i class="fab fa-facebook-f"></i>
+                     <i class="fab fa-instagram"></i>
+                     <i class="fab fa-linkedin-in"></i>
+                   </div>
+
+          
+         </div>
+      </div>
+      <hr />
+      <p class="p-footer-copyright">
+        copyright 2024  &copy; 2024 WishEat.com -All Rights Reserved.
+      </p>
+   </footer>
+   </div>
+   
+</body>
+<script>
+   
+  
+  window.onload = function() {
+      let msg = document.getElementById('message');
+      let pay = document.querySelector('.sign');
+      event.preventDefault();
+      pay.addEventListener('click', (event) => {
+           // Prevent the form from submitting
+          alert('Account created successfully');
+      
+        
+      });
+  };
+
+    let carts = [];
+        let currentItem = {};
+        var imgs = document.querySelectorAll(".cart-img");
+        var productNames = document.querySelectorAll(".product-name");
+        var productPrices = document.querySelectorAll(".product-price h1 ");
+        var quantityInputs = document.querySelectorAll(".quantity-input");
+        var addToCartButtons = document.querySelectorAll(".Add-to-card");
+      
+        addToCartButtons.forEach(function(button, index) {
+            button.addEventListener("click", function() {
+                currentItem = {
+                    imgSrc: imgs[index].src,
+                    name: productNames[index].textContent,
+                    price: parseFloat(productPrices[index].textContent.replace('$', '')),
+                    quantity: parseInt(quantityInputs[index].value)
+                };
+                addToCart();
+            });
+        });
+
+        function addToCart() {
+            const existingItemIndex = carts.findIndex(item => item.name === currentItem.name);
+
+            if (existingItemIndex >= 0) {
+                carts[existingItemIndex].quantity += currentItem.quantity;
+            } else {
+                carts.push(currentItem);
+            }
+
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            carts.splice(index, 1);
+            updateCart();
+        }
+
+           function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalpayment = document.getElementById('payment');
+            var discount = document.getElementById(".discount");
+            const cartTotal = document.getElementById('cart-total');
+            
+
+            cartItems.innerHTML = '';
+            let  payment = 0;
+            let total = 0;
+            let dis=0;
+           
+
+
+            carts.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <img src="${item.imgSrc}" alt="${item.name}" width="50" height="50" >
+                    ${item.name}   $${item.price} x ${item.quantity}
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `; 
+                li.style.display = 'flex';  
+                li.style.alignItems = 'center';  
+                li.style.padding = '10px'; 
+                li.style.borderBottom = '1px solid #ccc';  
+                li.style.fontSize = '15px';
+                li.style.gap='10px';
+                li.style.marginLeft='-40px';
+                li.style.padding='5px';
+                cartItems.appendChild(li);
+                payment += item.price * item.quantity;
+                totalpayment.innerText = payment.toFixed(2);
+
+
+                total += payment ;
+                 total = total - (total/10);
+                
+            });
+            
+            cartTotal.innerText = total.toFixed(2);
+        }
+
+        function toggleCartMenu() {
+            const cartMenu = document.getElementById('cart-menu');
+            if (cartMenu.style.display == "none" || cartMenu.style.display === "") {
+                cartMenu.style.display = "block";
+            } else {
+                cartMenu.style.display = "none";
+            }
+        }
+        document.addEventListener('click', (event)=> {
+  const cartMenu = document.getElementById('cart-menu');
+  let close=document.querySelector('.close');
+close.addEventListener('click',()=>{
+  cartMenu.style.display='none';
+})
+
+
+if (!cartMenu.contains(event.target) && !cartButton.contains(event.target)) {
+  cartMenu.style.display = "none";
+}
+});
+
+
+
+document.getElementById('cart-menu').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+document.getElementById('Checkout').addEventListener('click', function() {
+   const menuName = carts.reduce((acc, item) => acc === '' ? item.name : acc + ', ' + item.name, '');
+    const menuQuantity = carts.reduce((acc, item) => acc + item.quantity, 0);
+    const totalPrice = parseFloat(document.getElementById('cart-total').innerText);
+
+    saveFavoriteMenu(menuName, menuQuantity, totalPrice);
+});
+
+function saveFavoriteMenu(menuName, menuQuantity, total) {
+    fetch('/save-favorite', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            menu_name: menuName,
+            menu_quantity: menuQuantity,
+            total_price: total,
+        }),
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
+</script>
+</html>

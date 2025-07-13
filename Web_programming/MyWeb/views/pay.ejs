@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<body>
+<h1>Payment Data</h1>
+<ul>
+ <% for (let Payment of Payments) { %>
+  
+   <li>Name: <%= Payment.name %></li>
+   <br>
+   <li>Address: <%= Payment.address %></li>
+   <br>
+   <li>Email: <%= Payment.email %></li>
+   <br>
+   <li>City: <%= Payment.city %></li>
+   <br>
+   <li>State: <%= Payment.state %></li>
+   <br>
+   <li>Card Name: <%= Payment.card %></li>
+   <br>
+   <li>Credit: <%= Payment.credit %></li>
+   <br>
+   <li>Zip_code: <%= Payment.zip_code %></li>s
+   <br>
+   <li>Date: <%= Payment.date %></li>
+   <br>
+   <li>CVV: <%= Payment.cvv %></li>
+   <br>
+<% } %>
+</ul>
+</body>
+</html>

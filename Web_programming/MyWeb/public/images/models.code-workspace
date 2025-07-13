@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../models"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../node"
+		},
+		{
+			"path": "../Code"
+		},
+		{
+			"path": "C:/Users/Ali Haider/Desktop/20javascript_projects-main/add_to_cart Javascript"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PROJECT WEB"
+	}
+}

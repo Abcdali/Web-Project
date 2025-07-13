@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.CSS">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+  <style>
+     
+.container {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 20px;
+   justify-content: center;
+   
+}
+.nav{
+  margin-left: -50rem;
+}
+.nav li{
+    margin: 20px;
+    margin-top: -20px;
+}
+
+header {
+    background-color: #b6c2b6;
+    padding: 20px 40px;
+   opacity: 50px;
+ border-bottom: 1px solid black;
+ 
+   position: sticky;
+   opacity: 99%;
+   
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    float: left;
+    margin-top: -30px;
+    
+    
+   
+}
+
+nav {
+    float: right;
+    margin-right: -90px;
+    margin-top: -10px;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+ 
+
+.nav li a:hover {
+    color: orange;
+    border-bottom: 2px solid orange;
+    
+    
+}
+
+
+ .nav-right{
+   margin-top: -34%;
+  margin-left: -60px;
+  display: flex;
+
+    
+}
+
+.search-shopping a{
+    
+    margin: 15px;
+}
+
+.sign-in{
+    margin-right: -10px;
+    margin-top: -10px;
+}
+.sign-in button{
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+   
+}
+.sign-in button:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.search-shopping a:hover {
+   
+    color: orange;
+   
+    border-bottom: 2px solid orange;
+    
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fjalla One", sans-serif;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+   background-size: cover;
+}
+
+.form {
+    width: 500px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 3px #ccc;
+    display: block;
+    justify-content: center;
+    margin-top: 7rem;  
+    margin-left: 22rem;
+    transform: translate(-50% -50%);
+}
+
+
+.login-popup {
+    width: 100%;
+    display: flex;
+
+}
+
+
+.left {
+    flex: 1;
+    padding: 40px;
+}
+.left h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    
+}
+
+
+ 
+
+.textbox {
+    margin-bottom: 15px;
+    
+}
+
+
+.textbox input {
+   
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(255, 255,255 .2);
+    font-size: 15px;
+    color: rgb(14, 13, 13);
+    padding: 10px ;
+    border-radius: 20px;
+    margin-left: -10px;
+}
+.textbox input::placeholder{
+    color: rgb(12, 12, 12);
+   }
+
+
+.form-action {
+    display: flex;
+    justify-content: space-between;
+    margin-right: -20px;
+}
+
+
+
+.form-action button {
+    padding: 8px 15px;
+    background-color: none;
+    color: hsl(0, 87%, 3%);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid;
+    
+}
+.form-action button:hover{
+     background-color: #3be910;
+     color: black;
+}
+a.form-action button{
+    font-size: 120%;
+}
+
+
+.form-action a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    
+
+}
+.form-action a:hover{
+    
+    color: #3be910;
+}
+
+
+
+.right {
+    flex: 1;
+    padding: 20px ;
+   
+   
+    text-align: center;
+    background-image: url(/images/1.jpg);
+    width: 100px;
+    height: 280px;
+   
+    background-repeat: no-repeat;
+    background-position:right;
+   background-size: cover; 
+}
+
+
+.right h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-top: 70px;
+}
+.right span{
+    color: red;
+    font-size: 1.5rem;
+    outline-color:3px red;
+    
+
+}
+
+.right p {
+    color: green;
+    font-size: 16px;
+    margin-bottom: 20px;
+   justify-content: space-between;
+}
+
+
+.right a {
+    padding: 10px 20px;
+}
+.register-button {
+    padding: 10px 20px;
+   
+       color: black;
+       
+    
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; 
+    text-align: center;
+    margin: 20px;
+  
+  }
+  .register-button:hover{
+    background-color: #3be910;
+  
+  }
+  #message {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #c91010;
+    text-align: center;
+}
+#mess{
+    margin-top: 10px;
+    font-size: 15px;
+    color: #07ec13;
+    text-align: center; 
+}
+
+
+
+
+
+
+
+  </style>
+<body>
+  <header >
+       
+           
+    <div class="container">
+   
+        <a href="#" class="logo"><img src="/images/logo.png" alt="ghgjhfjfjfh" width="50px"></a>
+        
+        <nav >
+            <ul class="nav">
+                <li><a    href="#">Home</a></li>
+                <li><a    href="#">Menu</a></li>
+                <li><a    href="#">Mobile-App</a></li>
+                <li><a    href="#">About</a></li>
+                
+                
+            </ul>
+            <div class="nav-right">
+              <div class="search-shopping">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=" "><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+              </div>
+             
+                    <a  href="Sign_up" class="sign-in" id="sign" target="_blank" ><button>Sign up</button></a>
+               </div>
+            </nav>
+      
+            </div>
+</header>
+
+    
+    <div class="form" >
+        <div class="login-popup">
+            <div class="left">
+                <h1>Member Login</h1>
+                <form action="/Sign_in" name="myform" method="post"    id="loginForm" target="_blank">
+                    <div class="textbox">
+                        <input type="text" placeholder="Username" name="username" id="username" required>      
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                        <p id="message"> </p>
+                       
+                    </div>
+                    <div class="form-action">
+
+                      
+                      <button type="submit">Login</button>
+                    </form>
+                        <a href="#">Forgot password?</a> 
+                        
+                       
+                    </div>
+                    <p id="message"><%= message %></p>
+            </div>
+          
+            <div class="right">
+              
+                <h2>WIST<span>EAT</span> <br>
+                 <span>FOOD</span> DELIVERY</h2>
+                   <a href="Sign_up"> <button class="register-button" target="_blank"><b>Register Here</b></button></a>
+                  
+                </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+</html>

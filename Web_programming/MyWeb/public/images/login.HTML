@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.CSS">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Fjalla+One&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+<body>
+  <header >
+       
+           
+    <div class="container">
+   
+        <a href="#" class="logo"><img src="food-removebg-preview.png" alt="" width="50px"></a>
+        
+        <nav >
+            <ul class="nav">
+                <li><a    href="/Home1.HTML">Home</a></li>
+                <li><a    href="#menu">Menu</a></li>
+                <li><a    href="#Appdownload">Mobile-App</a></li>
+                <li><a    href="#footer">About</a></li>
+                
+                
+            </ul>
+            <div class="nav-right">
+              <div class="search-shopping">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href=" "><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+              </div>
+             
+                    <a  href="sign-up.HTML" class="sign-in" id="sign" ><button>Sign up</button></a>
+               </div>
+            </nav>
+      
+            </div>
+</header>
+
+    
+    <div class="form">
+        <div class="login-popup">
+            <div class="left">
+                <h1>Member Login</h1>
+                <form action="/node.php" name="myform" method="post"    id="loginForm">
+                    <div class="textbox">
+                        <input type="text" placeholder="Username" name="username" id="username" required>      
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                        <p id="message"> </p>
+                       
+                    </div>
+                    <div class="form-action">
+                      
+                      <button type="submit">Login</button></form>
+                        <a href="#">Forgot password?</a> 
+                       
+                    </div>
+            </div>
+            <div class="right">
+              
+                <h2>WIST<span>EAT</span> <br>
+                 <span>FOOD</span> DELIVERY</h2>
+                   <a href="/sign-up.HTML"> <button class="register-button"><b>Register Here</b></button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const message = document.getElementById('message');
+
+      let validusername = "alihaider123";
+      let validpassword = '12345';
+
+      if (username === validusername && password === validpassword) {
+        message.textContent = 'Login successful!';
+        message.style.color = 'green';
+        console.log({ username,  password });
+         
+         
+          window.location.href = "/Home2.HTML";
+      } else {
+       
+        message.textContent = 'Invalid username or password';
+          
+      }
+    
+       
+    
+  });
+</script>
+
+
+</html>
